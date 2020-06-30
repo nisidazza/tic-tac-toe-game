@@ -107,6 +107,11 @@ namespace TicTacToe
             //Set button text to the result
             button.Content = mPlayer1Turn ? "X" : "O";
 
+            // Change noughts to red
+            if (!mPlayer1Turn)
+            {
+                button.Foreground = Brushes.Red;
+            }
 
             // Change the player's turn - shortcut (bitwise operator): mPlayer1Turn ^=true;
             if (mPlayer1Turn)
