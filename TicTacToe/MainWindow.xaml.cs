@@ -122,6 +122,18 @@ namespace TicTacToe
             {
                 mPlayer1Turn = true;
             }
+
+            //Check for a winner
+            CheckForWinner();
+            
+        }
+
+        /// <summary>
+        /// Checks if there is a winner of a 3 line straight
+        /// </summary>
+
+        private void CheckForWinner()
+        {
             
         }
     }
