@@ -142,6 +142,18 @@ namespace TicTacToe
                 //Highlight winning cells in green
                 Button0_0.Background = Button1_0.Background = Button2_0.Background = Brushes.Green; 
             }
+
+            //Check for no winner and full board
+            if (!mResults.Any(result => result == MarkType.Free))
+            {
+                mGameEnded = true;
+
+                //Turns all cells orange
+                Container.Children.Cast<Button>().ToList().ForEach(button =>
+                {
+                    button.Background = Brushes.Orange;
+                });
+            }
         }
     }
 }
