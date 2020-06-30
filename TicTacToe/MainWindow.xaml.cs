@@ -43,7 +43,14 @@ namespace TicTacToe
 
         private void NewGame()
         {
-            throw new NotImplementedException();
+            //create a new blank array of free cells
+            mResults = new MarkType[9];
+
+            for (var i = 0; i < mResults.Length; i++)
+            {
+                mResults[i] = MarkType.Free;
+            }
+
         }
     }
 }
