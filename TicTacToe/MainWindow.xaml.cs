@@ -86,6 +86,9 @@ namespace TicTacToe
                 NewGame();
                 return;
             }
+
+            //explicit cast that converts the sender obj to a button
+            var button = (Button) sender;
         }
     }
 }
