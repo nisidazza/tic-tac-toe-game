@@ -60,11 +60,13 @@ namespace TicTacToe
             //take all the elements in the grid container, cast them to buttons, convert them from Enum to a list and iterate through them
             Container.Children.Cast<Button>().ToList().ForEach(button =>
             {
+                //change background, foreground and content to default values
                 button.Content = string.Empty;
                 button.Background = Brushes.White;
                 button.Foreground = Brushes.Blue;
             });
 
+            //make sure the game hasn't finished
             mGameEnded = false;
         }
     }
