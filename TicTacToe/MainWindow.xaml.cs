@@ -51,6 +51,9 @@ namespace TicTacToe
                 mResults[i] = MarkType.Free;
             }
 
+            //Make sure Player 1 starts the game
+            mPlayer1Turn = true;
+
         }
     }
 }
