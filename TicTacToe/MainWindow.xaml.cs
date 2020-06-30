@@ -101,14 +101,7 @@ namespace TicTacToe
             if (mResults[index] != MarkType.Free) return;
 
             //Set the cell value based on which player turn is it
-            if (mPlayer1Turn)
-            {
-                mResults[index] = MarkType.Cross;
-            }
-            else
-            {
-                mResults[index] = MarkType.Nought;
-            }
+            mResults[index] = mPlayer1Turn ? MarkType.Cross : MarkType.Nought;
             
         }
     }
