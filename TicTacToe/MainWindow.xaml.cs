@@ -87,7 +87,7 @@ namespace TicTacToe
                 return;
             }
 
-            //explicit cast that converts the sender obj to a button
+            //Explicit cast that converts the sender obj to a button
             var button = (Button) sender;
 
             //Find the buttons position in the array
@@ -97,7 +97,18 @@ namespace TicTacToe
             // access the value in the array
             var index = column + (row * 3);
 
+            //Don't do anything if the cell already has a value in it
+            if (mResults[index] != MarkType.Free) return;
 
+            //Set the cell value based on which player turn is it
+            if (mPlayer1Turn)
+            {
+                mResults[index] = MarkType.Cross;
+            }
+            else
+            {
+                mResults[index] = MarkType.Nought;
+            }
             
         }
     }
