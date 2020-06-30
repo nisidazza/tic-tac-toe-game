@@ -80,7 +80,12 @@ namespace TicTacToe
         /// <param name="e">The event of the click</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            // Start a new game on the click after it finished
+            if (mGameEnded)
+            {
+                NewGame();
+                return;
+            }
         }
     }
 }
