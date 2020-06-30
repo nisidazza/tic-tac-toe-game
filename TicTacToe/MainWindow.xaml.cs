@@ -13,6 +13,17 @@ namespace TicTacToe
         /// Holds the current results of cells in the active game
         /// </summary>
         private MarkType[] mResults;
+
+        /// <summary>
+        /// True if it is player 1's turn (X) or player 2's turn (O)
+        /// </summary>
+        private bool mPlayer1Turn;
+
+        /// <summary>
+        /// True if the game has ended
+        /// </summary>
+        private bool mGameEnded;
+
         #endregion
 
         #region Constructor
