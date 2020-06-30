@@ -44,9 +44,11 @@ namespace TicTacToe
 
         #endregion
 
+        #region New Game
         /// <summary>
         /// Starts a new game and clears all values back to the start
         /// </summary>
+
         private void NewGame()
         {
             //create a new blank array of free cells
@@ -73,6 +75,9 @@ namespace TicTacToe
             mGameEnded = false;
         }
 
+        #endregion
+
+        #region Handle Button Click
         /// <summary>
         /// Handles a  button click event
         /// </summary>
@@ -128,6 +133,10 @@ namespace TicTacToe
 
         }
 
+        #endregion
+
+
+        #region Check for a Winner
         /// <summary>
         /// Checks if there is a winner of a 3 line straight
         /// </summary>
@@ -246,5 +255,6 @@ namespace TicTacToe
                 });
             }
         }
+        #endregion
     }
 }
