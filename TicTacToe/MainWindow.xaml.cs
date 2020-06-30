@@ -8,6 +8,13 @@ namespace TicTacToe
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Private Members
+        /// <summary>
+        /// Holds the current results of cells in the active game
+        /// </summary>
+        private MarkType[] mResults;
+        #endregion
+
         #region Constructor
 
         /// <summary>
