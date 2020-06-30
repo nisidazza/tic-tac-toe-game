@@ -78,6 +78,7 @@ namespace TicTacToe
         /// </summary>
         /// <param name="sender">The button was clicked</param>
         /// <param name="e">The event of the click</param>
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Start a new game on the click after it finished
@@ -105,6 +106,17 @@ namespace TicTacToe
 
             //Set button text to the result
             button.Content = mPlayer1Turn ? "X" : "O";
+
+
+            // Change the player's turn - shortcut (bitwise operator): mPlayer1Turn ^=true;
+            if (mPlayer1Turn)
+            {
+                mPlayer1Turn = false;
+            }
+            else
+            {
+                mPlayer1Turn = true;
+            }
             
         }
     }
