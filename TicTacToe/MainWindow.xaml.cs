@@ -89,6 +89,16 @@ namespace TicTacToe
 
             //explicit cast that converts the sender obj to a button
             var button = (Button) sender;
+
+            //Find the buttons position in the array
+            var column = Grid.GetColumn(button);
+            var row = Grid.GetRow(button);
+
+            // access the value in the array
+            var index = column + (row * 3);
+
+
+            
         }
     }
 }
