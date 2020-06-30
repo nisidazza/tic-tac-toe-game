@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace TicTacToe
 {
@@ -54,6 +57,15 @@ namespace TicTacToe
             //Make sure Player 1 starts the game
             mPlayer1Turn = true;
 
+            //take all the elements in the grid container, cast them to buttons, convert them from Enum to a list and iterate through them
+            Container.Children.Cast<Button>().ToList().ForEach(button =>
+            {
+                button.Content = string.Empty;
+                button.Background = Brushes.White;
+                button.Foreground = Brushes.Blue;
+            });
+
+            mGameEnded = false;
         }
     }
 }
