@@ -102,6 +102,9 @@ namespace TicTacToe
 
             //Set the cell value based on which player turn is it
             mResults[index] = mPlayer1Turn ? MarkType.Cross : MarkType.Nought;
+
+            //Set button text to the result
+            button.Content = mPlayer1Turn ? "X" : "O";
             
         }
     }
